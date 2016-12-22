@@ -1,0 +1,32 @@
+Dim column As Long
+
+column = 1
+
+Sheets("Sheet4").Activate
+
+Sheets.add(Type=xlWorksheet,After:=Sheets("Sheet4")).Name="mysheet"
+
+For i = 1 To Sheets("Sheet4").UsedRange.Rows.Count
+	
+	For column = 1 To Sheets("Sheet4").UsedRange.Columns.Count
+
+		Select Case column
+
+		 Case 1
+
+		 Sheets("Sheet4").Cells(i,column) = Sheets("Sheet4").Cells(i,column)
+
+		 Case 2
+
+		 Sheets("Sheet4").Cells(i,column) = Sheets("Sheet4").Cells(i,column)
+
+		 Case 3
+
+		 Sheets("Sheet4").Cells(i,column) = Sheets("Sheet4").Cells(i,column)
+
+		 End Select
+
+		 Next
+	Next		 
+
+
